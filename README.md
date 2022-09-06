@@ -1,9 +1,9 @@
-#Git Learning
+# Git Learning
 
 This Repos is ment to try and learn how to make the best with git commands.
 Inspired and oriented to the "advanced Git" Series of css-tricks
 
-##Part 1 The Perfect Commit
+## Part 1 The Perfect Commit
 
 In Order to create a readable and understandable Version Control and not just some sort of backup.
 Changes in a single commit should belong with each other and make sense together.
