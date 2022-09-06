@@ -17,3 +17,11 @@ what makes a good commit message?
    - What changed in your project with this commit?
    - What was the reason for making this change?
    - Is there anything special to watch out for? Anything someone else should know about these changes?
+
+### Exercise Committing single Files
+One of the first things to do is to commit multiple times, instead of throwing everything together.
+
+In the folder Exercise_01 are 3 files with their content commented out.
+- Remove the comment so that the content is "valid".
+- Commit the 3 files in different commits. ``git add <filename>`` + ``git commit``
+- Use a meaningful message as if their content had been new.
