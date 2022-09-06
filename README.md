@@ -25,3 +25,13 @@ In the folder Exercise_01 are 3 files with their content commented out.
 - Remove the comment so that the content is "valid".
 - Commit the 3 files in different commits. ``git add <filename>`` + ``git commit``
 - Use a meaningful message as if their content had been new.
+
+### Exercise Committing partial file
+Sometimes we have multiple changes in a file. Were we either only want to commit part of it,
+or they belong to 2 different commits. E.g. we changed the link href, and we also added a new section to the page.
+
+In the folder Exercise_02 are 2 nearly identically files.
+- Copy the content of file "index_new" into file "index".
+- Commit the changes in index.html in parts ``git add -p index.html`` + ``git commit``
+- (i) You have to commit multiple times
+- (i) You might have to take attention in which order you create the commits
