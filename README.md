@@ -35,3 +35,18 @@ In the folder Exercise_02 are 2 nearly identically files.
 - Commit the changes in index.html in parts ``git add -p index.html`` + ``git commit``
 - (i) You have to commit multiple times
 - (i) You might have to take attention in which order you create the commits
+
+[y,n,q,a,d,j,J,g,/,e,?]
+  y - stage this hunk
+  n - do not stage this hunk
+  q - quit; do not stage this hunk nor any of the remaining ones
+  a - stage this hunk and all later hunks in the file
+  d - do not stage this hunk nor any of the later hunks in the file
+  j - leave this hunk undecided, see next undecided hunk
+  J - leave this hunk undecided, see next hunk
+  g - select a hunk to go to
+  / - search for a hunk matching the given regex
+  e - manually edit the current hunk
+  ? - print help
+
+(?) What are some potential traps/mistakes. Which things cant be "easily" partialy commited?
