@@ -72,3 +72,15 @@ In the folder Exercise_03 theres a index file with a list in it.
 - Checkout the branch Exercise_03 ``git checkout Exercise_03``
 - Reapply your changes ``git stash pop``
 - Resolve the conflict (by Hand or with Help of Tool)
+
+### Exercise Rebase vs Merge
+A pretty good explanation what happens in merge and what in rebase can be found here:
+
+https://css-tricks.com/rebase-vs-merge-integrating-changes-in-git/
+
+In the folder Exercise_04 is a file that had multible commits.
+The branch Exercise_04 does not have all of those commits, but a few new ones.
+
+- Checkout the branch Exercise_04 ``git checkout Exercise_04``
+- Either merge or rebase the branch with master ``git rebase master`` ``git merge --no-ff master``
+- Resolve potential conflicts
