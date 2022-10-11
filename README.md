@@ -50,3 +50,25 @@ In the folder Exercise_02 are 2 nearly identically files.
   ? - print help
 
 (?) What are some potential traps/mistakes. Which things cant be "easily" partialy commited?
+
+### Exercise Conflicts
+Merge conflicts can accur when 2 different sources try to apply changes at the "same" place.
+Most commong merge conflics happen during:
+- merge, pull, rebase, cherry pick, applying commits from other branch, reapplying a stash
+
+Most of the time git can resolve them by it self. If not Git will tell you.
+
+If Git cant resolve the conflicts by itself we have following to options
+- Resovel the conflict(s)
+- Abort or undo the action that cause the conflict(s) (i) Usuall with --abort option e.g ``git merge --abort``
+
+Conflicts are surrounded by <<<<<<< and >>>>>>> . 
+And the 2 different changes seperated by =======
+
+
+In the folder Exercise_03 theres a index file with a list in it.
+- Add and Change at least 1 Item (!) DONT add/commit
+- Stash your changes ``git stash``
+- Checkout the branch Exercise_03 ``git checkout Exercise_03``
+- Reapply your changes ``git stash pop``
+- Resolve the conflict (by Hand or with Help of Tool)
