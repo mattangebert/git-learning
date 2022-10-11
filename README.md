@@ -58,6 +58,7 @@ Most commong merge conflics happen during:
 
 Most of the time git can resolve them by it self. If not Git will tell you.
 
+<<<<<<< HEAD
 If Git cant resolve the conflicts by itself we have following to options
 - Resovel the conflict(s)
 - Abort or undo the action that cause the conflict(s) (i) Usuall with --abort option e.g ``git merge --abort``
@@ -72,3 +73,9 @@ In the folder Exercise_03 theres a index file with a list in it.
 - Checkout the branch Exercise_03 ``git checkout Exercise_03``
 - Reapply your changes ``git stash pop``
 - Resolve the conflict (by Hand or with Help of Tool)
+=======
+In the folder Exercise_03 theres a index file with a list in it.
+- Add and Change at least 1 Item (!) DONT add/commit
+- Checkout the branch Exercise_03 ``git checkout Exercise_03``
+- Resolve the conflict
+>>>>>>> feat: Add conflicts exercise
