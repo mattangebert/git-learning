@@ -23,11 +23,11 @@ body {
     background: #272727;
 }
 
-.duck {
+.duck, .swan {
     width: 110px;
     height: 100px;
     z-index: 3;
-    opacity: 0;
+    opacity: 1;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -114,4 +114,21 @@ body {
     -webkit-transform: rotate(32deg);
     -ms-transform: rotate(32deg);
     transform: rotate(32deg);
+}
+
+.swan .duck-head,
+.swan .duck-body {
+    background: grey
+}
+
+.swan .duck-tail {
+    border-bottom-color : grey;
+}
+
+.swan .duck-wing {
+    background: darkgrey;
+}
+
+.swan .duck-beak {
+    background: black;
 }
