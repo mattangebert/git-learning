@@ -23,17 +23,19 @@ body {
     background: #272727;
 }
 
-.duck, .swan {
+.duck,
+.swan {
     width: 110px;
     height: 100px;
     z-index: 3;
-    opacity: 1;
+    opacity: 0;
     position: absolute;
     top: 0;
     bottom: 0;
 }
 
-.duck:hover {
+.duck:hover,
+.swan:hover {
     opacity: 1;
 }
 
