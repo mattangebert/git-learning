@@ -37,17 +37,17 @@ In the folder Exercise_02 are 2 nearly identically files.
 - (i) You might have to take attention in which order you create the commits
 
 [y,n,q,a,d,j,J,g,/,e,?]
-  y - stage this hunk
-  n - do not stage this hunk
-  q - quit; do not stage this hunk nor any of the remaining ones
-  a - stage this hunk and all later hunks in the file
-  d - do not stage this hunk nor any of the later hunks in the file
-  j - leave this hunk undecided, see next undecided hunk
-  J - leave this hunk undecided, see next hunk
-  g - select a hunk to go to
-  / - search for a hunk matching the given regex
-  e - manually edit the current hunk
-  ? - print help
+-  y - stage this hunk
+-  n - do not stage this hunk
+-  q - quit; do not stage this hunk nor any of the remaining ones
+-  a - stage this hunk and all later hunks in the file
+-  d - do not stage this hunk nor any of the later hunks in the file
+-  j - leave this hunk undecided, see next undecided hunk
+-  J - leave this hunk undecided, see next hunk
+-  g - select a hunk to go to
+-  / - search for a hunk matching the given regex
+-  e - manually edit the current hunk
+-  ? - print help
 
 (?) What are some potential traps/mistakes. Which things cant be "easily" partialy commited?
 
@@ -84,3 +84,22 @@ The branch Exercise_04 does not have all of those commits, but a few new ones.
 - Checkout the branch Exercise_04 ``git checkout Exercise_04``
 - Either merge or rebase the branch with master ``git rebase master`` ``git merge --no-ff master``
 - Resolve potential conflicts
+
+### Exercise Interactive Rebase
+Often enough we want to adjust things that are already commitet
+
+the last commit can be edited by using ``git commit --amend``
+(!) Will only "easily" work when branch is not yet pushed
+
+For older commits you have to perform and interactive rebase ``git rebase -i HEAD~3``
+in the Editor window following actions are possible (by replacing the word pick)
+-  p, pick = use commit
+-  r, reword = use commit, but edit the commit message
+-  e, edit = use commit, but stop for amending
+-  s, squash = use commit, but meld into previous commit
+-  f, fixup = like "squash", but discard this commit's log message
+-  x, exec = run command (the rest of the line) using shell
+
+In the folder Exercise_05 are a few files and multible commits.
+- Checkout the branch Exercise_05 ``git checkout Exercise_05``
+- Use interactive rebase to correct the commits flagged with [EXE_5]
