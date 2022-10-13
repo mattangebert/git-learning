@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-    background: #272727;
+    background: #3498DB;
 }
 
 .duck,
@@ -28,14 +28,18 @@ body {
     width: 110px;
     height: 100px;
     z-index: 3;
-    opacity: 0;
     position: absolute;
     top: 0;
     bottom: 0;
 }
 
-.duck:hover,
-.swan:hover {
+.duck [class^="duck-"],
+.swan [class^="duck-"] {
+    opacity: 0;
+}
+
+.duck.visible [class^="duck-"],
+.swan.visible [class^="duck-"] {
     opacity: 1;
 }
 
@@ -46,6 +50,7 @@ body {
     border-radius: 50%;
     margin-left: 0.3rem;
     position: relative;
+    pointer-events: none;
 }
 
 .duck-eye {
@@ -133,4 +138,94 @@ body {
 
 .swan .duck-beak {
     background: black;
+}
+
+.wave-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    -webkit-box-sizing: content-box;
+    box-sizing: border-box;
+}
+
+.wave,
+.wave:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 0;
+    width: 0;
+    border-radius: 100%;
+    border: #FFF 5px solid;;
+    opacity: 0;
+}
+
+
+
+.wave {
+    -moz-animation-name: ripple;
+    -webkit-animation-name: ripple;
+    animation-name: ripple;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.wave:after {
+    content: "";
+    width: 15%;
+    height: 15%;
+    -moz-animation-name: ripple-2;
+    -webkit-animation-name: ripple-2;
+    animation-name: ripple-2;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.visible .wave {
+    display: none;
+}
+
+  @keyframes ripple {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 100%;
+      height: 100%;
+      border-width: 1px;
+      opacity: 0;
+    }
+}
+
+@keyframes ripple-2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-width: 1px;
+  }
 }
