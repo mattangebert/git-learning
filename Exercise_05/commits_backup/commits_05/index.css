@@ -1,0 +1,231 @@
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+body {
+    background: #3498DB;
+}
+
+.duck,
+.swan {
+    width: 110px;
+    height: 100px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.duck [class^="duck-"],
+.swan [class^="duck-"] {
+    opacity: 0;
+}
+
+.duck.visible [class^="duck-"],
+.swan.visible [class^="duck-"] {
+    opacity: 1;
+}
+
+.duck-head {
+    width: 50%;
+    height: 45%;
+    background: #fead26;
+    border-radius: 50%;
+    margin-left: 0.3rem;
+    position: relative;
+    pointer-events: none;
+}
+
+.duck-eye {
+    width: 15%;
+    height: 20%;
+    border-radius: 50%;
+    background: #ffffff;
+    position: absolute;
+    top: 35%;
+    left: 18%;
+}
+
+.duck-pupil {
+    width: 75%;
+    height: 90%;
+    background: #272727;
+    border-radius: 45%;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+.duck-beak {
+    width: 50%;
+    height: 40%;
+    background: rgba(234, 31, 31, 0.7);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -25%;
+    z-index: -1;
+}
+
+.duck-body {
+    width: 100%;
+    height: 55%;
+    background: #fead26;
+    border-radius: 50%;
+    position: relative;
+    top: -11%;
+    left: 10%;
+}
+
+.duck-wing {
+    width: 50%;
+    height: 45%;
+    border-top-left-radius: 45%;
+    border-bottom-left-radius: 45%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: #ef9701;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+
+.duck-tail {
+    width: 20%;
+    height: 30%;
+    border-top: 0px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 25px solid #fead26;
+    border-left: 10px solid transparent;
+    position: absolute;
+    right: -6%;
+    top: -3%;
+    -webkit-transform: rotate(32deg);
+    -ms-transform: rotate(32deg);
+    transform: rotate(32deg);
+}
+
+.swan .duck-head,
+.swan .duck-body {
+    background: grey
+}
+
+.swan .duck-tail {
+    border-bottom-color : grey;
+}
+
+.swan .duck-wing {
+    background: darkgrey;
+}
+
+.swan .duck-beak {
+    background: black;
+}
+
+.wave-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    -webkit-box-sizing: content-box;
+    box-sizing: border-box;
+}
+
+.wave,
+.wave:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 0;
+    width: 0;
+    border-radius: 100%;
+    border: #FFF 5px solid;;
+    opacity: 0;
+}
+
+
+
+.wave {
+    -moz-animation-name: ripple;
+    -webkit-animation-name: ripple;
+    animation-name: ripple;
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.wave:after {
+    content: "";
+    width: 15%;
+    height: 15%;
+    -moz-animation-name: ripple-2;
+    -webkit-animation-name: ripple-2;
+    animation-name: ripple-2;
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.visible .wave {
+    display: none;
+}
+
+  @keyframes ripple {
+    from {
+      opacity: 1;
+    }
+    to {
+      width: 100%;
+      height: 100%;
+      border-width: 1px;
+      opacity: 0;
+    }
+}
+
+@keyframes ripple-2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-width: 1px;
+  }
+}

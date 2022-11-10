@@ -1,0 +1,5 @@
+[EXE_5] Finish Game
+
+    Randomize bubble animation and add new ones if bubble is empty.
+
+    Refs: EXE_5

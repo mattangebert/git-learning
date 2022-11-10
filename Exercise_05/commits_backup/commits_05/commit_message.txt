@@ -1,0 +1,5 @@
+[EXE_5] feat: Adjust game logic
+
+    Change find from hover to click.
+    Add bubbles animations.
+    Change background color.
