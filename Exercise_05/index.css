@@ -47,6 +47,7 @@ body {
     width: 50%;
     height: 45%;
     background: #fead26;
+
     border-radius: 50%;
     margin-left: 0.3rem;
     position: relative;
@@ -151,6 +152,11 @@ body {
     width: 150px;
     -webkit-box-sizing: content-box;
     box-sizing: border-box;
+    animation-play-state: running;
+}
+
+.wave-wrapper.paused {
+    animation-play-state: paused;
 }
 
 .wave,
@@ -168,8 +174,6 @@ body {
     opacity: 0;
 }
 
-
-
 .wave {
     -moz-animation-name: ripple;
     -webkit-animation-name: ripple;
@@ -183,6 +187,7 @@ body {
     -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    animation-play-state: inherit;
 }
 
 .wave:after {
@@ -198,6 +203,7 @@ body {
     -moz-animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
+    animation-play-state: inherit;
 }
 
 .visible .wave {
