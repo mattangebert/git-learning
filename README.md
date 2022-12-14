@@ -49,25 +49,25 @@ In the folder Exercise_02 are 2 nearly identically files.
 -  e - manually edit the current hunk
 -  ? - print help
 
-(?) What are some potential traps/mistakes. Which things cant be "easily" partialy commited?
+(?) What are some potential traps/mistakes. Which things can't be "easily" partially committed?
 
 ### Exercise Conflicts
-Merge conflicts can accur when 2 different sources try to apply changes at the "same" place.
-Most commong merge conflics happen during:
-- merge, pull, rebase, cherry pick, applying commits from other branch, reapplying a stash
+Merge conflicts can occur when 2 different sources try to apply changes at the "same" place.
+Most common merge conflicts happen during:
+- merge, pull, rebase, cherry-pick, applying commits from other branch, reapplying a stash
 
-Most of the time git can resolve them by it self. If not Git will tell you.
+Most of the time git can resolve them by itself. If not Git will tell you.
 
-If Git cant resolve the conflicts by itself we have following to options
-- Resovel the conflict(s)
-- Abort or undo the action that cause the conflict(s) (i) Usuall with --abort option e.g ``git merge --abort``
+If Git can't resolve the conflicts by itself we have following to options
+- Resolve the conflict(s)
+- Abort or undo the action that cause the conflict(s) (i) Usually with --abort option e.g ``git merge --abort``
 
 Conflicts are surrounded by <<<<<<< and >>>>>>> . 
 And the 2 different changes seperated by =======
 
 
-In the folder Exercise_03 theres a index file with a list in it.
-- Add and Change at least 1 Item (!) DONT add/commit
+In the folder Exercise_03 there's an index file with a list in it.
+- Add and Change at least 1 Item (!) DON'T add/commit
 - Stash your changes ``git stash``
 - Checkout the branch Exercise_03 ``git checkout Exercise_03``
 - Reapply your changes ``git stash pop``
@@ -78,7 +78,7 @@ A pretty good explanation what happens in merge and what in rebase can be found 
 
 https://css-tricks.com/rebase-vs-merge-integrating-changes-in-git/
 
-In the folder Exercise_04 is a file that had multible commits.
+In the folder Exercise_04 is a file that had multiple commits.
 The branch Exercise_04 does not have all of those commits, but a few new ones.
 
 - Checkout the branch Exercise_04 ``git checkout Exercise_04``
@@ -86,7 +86,7 @@ The branch Exercise_04 does not have all of those commits, but a few new ones.
 - Resolve potential conflicts
 
 ### Exercise Interactive Rebase
-Often enough we want to adjust things that are already commitet
+Often enough we want to adjust things that are already committed
 
 the last commit can be edited by using ``git commit --amend``
 (!) Will only "easily" work when branch is not yet pushed
@@ -97,9 +97,9 @@ in the Editor window following actions are possible (by replacing the word pick)
 -  r, reword = use commit, but edit the commit message
 -  e, edit = use commit, but stop for amending
 -  s, squash = use commit, but meld into previous commit
--  f, fixup = like "squash", but discard this commit's log message
+-  f, fixup = like "squash", but discard this commits log message
 -  x, exec = run command (the rest of the line) using shell
 
-In the folder Exercise_05 are a few files and multible commits.
+In the folder Exercise_05 are a few files and multiple commits.
 - Checkout the branch Exercise_05 ``git checkout Exercise_05``
 - Use interactive rebase to correct the commits flagged with [EXE_5]
