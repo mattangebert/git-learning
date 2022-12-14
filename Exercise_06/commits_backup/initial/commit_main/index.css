@@ -1,0 +1,78 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tree-wrapper {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+}
+
+.tree-wrapper .tree .stamp {
+    height: 50%;
+    width: 5%;
+    background: saddlebrown;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.tree-wrapper .tree .leaves,
+.tree-wrapper .tree .cherries {
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.tree-wrapper .tree .leaves {
+    background: forestgreen;
+    z-index: 1;
+}
+
+.tree-wrapper .tree .cherries {
+    z-index: 2;
+}
+
+.tree-wrapper .tree .cherries .cherry {
+    width: 6%;
+    height: 6%;
+    border-radius: 50%;
+    background: darkred;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.tree-wrapper .tree .cherries .cherry:nth-child(1) {
+    transform: translate(500%, 250%);
+}
+
+.tree-wrapper .tree .cherries .cherry:nth-child(2) {
+    transform: translate(-476%, -444%);
+}
+
+.tree-wrapper .tree .cherries .cherry:nth-child(3) {
+    transform: translate(0%, 333%);
+}
+
+.tree-wrapper .tree .cherries .cherry:nth-child(4) {
+    transform: translate(-387%, 500%);
+}
+
+.tree-wrapper .tree .cherries .cherry:nth-child(5) {
+    transform: translate(215%, -293%);
+}
