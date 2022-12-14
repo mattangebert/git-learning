@@ -49,7 +49,7 @@ In the folder Exercise_02 are 2 nearly identically files.
 -  e - manually edit the current hunk
 -  ? - print help
 
-(?) What are some potential traps/mistakes. Which things can't be "easily" partially committed?
+:question: What are some potential traps/mistakes. Which things can't be "easily" partially committed?
 
 ### Exercise Conflicts
 Merge conflicts can occur when 2 different sources try to apply changes at the "same" place.
@@ -67,7 +67,7 @@ And the 2 different changes seperated by =======
 
 
 In the folder Exercise_03 there's an index file with a list in it.
-- Add and Change at least 1 Item (!) DON'T add/commit
+- Add and Change at least 1 Item :warning: DON'T add/commit
 - Stash your changes ``git stash``
 - Checkout the branch Exercise_03 ``git checkout Exercise_03``
 - Reapply your changes ``git stash pop``
@@ -89,7 +89,7 @@ The branch Exercise_04 does not have all of those commits, but a few new ones.
 Often enough we want to adjust things that are already committed
 
 the last commit can be edited by using ``git commit --amend``
-(!) Will only "easily" work when branch is not yet pushed
+:warning: Will only "easily" work when branch is not yet pushed
 
 For older commits you have to perform and interactive rebase ``git rebase -i HEAD~3``
 in the Editor window following actions are possible (by replacing the word pick)
@@ -103,3 +103,17 @@ in the Editor window following actions are possible (by replacing the word pick)
 In the folder Exercise_05 are a few files and multiple commits.
 - Checkout the branch Exercise_05 ``git checkout Exercise_05``
 - Use interactive rebase to correct the commits flagged with [EXE_5]
+
+### Exercise Cherry Pick
+When you committed & pushed something you didn't want to, or put it into the wrong branch
+cherry-pick is the tool you can use.
+
+To use the command type ``git cherry-pick <commitId>``
+commitId can be seen on the commits e.g. with ``git log``
+
+:warning: Cherry picking is meant for special occasions,
+not as a replacement for merging and rebasing.
+
+In the folder Exercise_06 are a few files and multiple commits-
+- Checkout the branch Exercise_06 ``git checkout Exercise_05``
+- Use cherry-pick to add the commit from main branch titled "feat: Add cherries to tree"
