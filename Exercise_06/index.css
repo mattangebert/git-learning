@@ -10,6 +10,7 @@ body {
     width: 500px;
     height: 500px;
     border: 2px solid black;
+    overflow: hidden;
 }
 
 .tree-wrapper .tree .stamp {
@@ -34,4 +35,18 @@ body {
     right: 0;
     margin: auto;
     z-index: 1;
+}
+
+.tree-wrapper .sun {
+    width: 50%;
+    height: 50%;
+    border-radius: 59%;
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    background:orange;
+    box-shadow: 0 0 10px orange,
+                0 0 60px orange,
+                0 0 200px yellow,
+                inset 0 0 80px yellow;
 }
